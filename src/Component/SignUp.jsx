@@ -4,13 +4,13 @@ import React, { useState, useContext } from 'react'; // ✅ useContext instead o
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Providers/AuthContext';
 
-const Registration = () => {
+const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [nameError, setNameError] = useState('')
     const { setUser, createUser, updateUser } = useContext(AuthContext); // ✅ correct hook
     const Navigate = useNavigate()
 
-    const handleRegistration = (e) => {
+    const handleSignUp = (e) => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -49,7 +49,7 @@ const Registration = () => {
         <div className="min-h-screen flex items-center justify-center">
             <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
                 <div className="card-body">
-                    <form onSubmit={handleRegistration}>
+                    <form onSubmit={handleSignUp}>
                         <h2 className="text-2xl font-bold text-center mb-4">
                             Register your account
                         </h2>
@@ -74,7 +74,8 @@ const Registration = () => {
                                 type="text"
                                 className="input input-bordered w-full"
                                 placeholder="Photo URL"
-                                name="photo" // ✅ fixed name
+                                name="photo" 
+                                required
                             />
 
                             {/* Email */}
@@ -97,7 +98,7 @@ const Registration = () => {
                                     name="password"
                                     required
                                 />
-                                {/* ✅ Fixed button type (was submit) */}
+                            
                                 <button
                                     type="button"
                                     className="absolute right-3 top-7 text-gray-500"
@@ -115,9 +116,9 @@ const Registration = () => {
                                 </label>
                             </div>
 
-                            {/* ✅ Fixed button text */}
+                            
                             <button className="btn btn-neutral w-full mt-4" type="submit">
-                                Register
+                                Sign Up
                             </button>
                         </fieldset>
 
@@ -137,4 +138,4 @@ const Registration = () => {
     );
 };
 
-export default Registration;
+export default SignUp;

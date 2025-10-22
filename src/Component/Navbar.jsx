@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Providers/AuthContext';
+import profile from '../assets/user.png'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -64,7 +65,9 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end space-x-2">
+                    <img src={profile} alt="" className='w-8' />
+
                     {user ? (
                         <button onClick={handleLogout} className="btn">
                             Log Out
