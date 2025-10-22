@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signOut,signInWithEmailAndPassword, updateProfile, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signOut,signInWithEmailAndPassword, updateProfile, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../Firebase/Firebase';
 
 
@@ -30,6 +30,10 @@ const AuthProvider = ({ children }) => {
     const logOut=()=>{
         return signOut(auth)
     }
+    //forget password
+     const forgetPassword = (email) =>{
+        return  sendPasswordResetEmail(auth, email)
+     }
 
     // Track the current logged-in user
     useEffect(() => {
@@ -48,7 +52,8 @@ const AuthProvider = ({ children }) => {
         signInUser,
         loading,
         updateUser,
-        googleSignIn
+        googleSignIn,
+        forgetPassword,
     };
 
     return (

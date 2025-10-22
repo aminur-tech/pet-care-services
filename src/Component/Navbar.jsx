@@ -66,7 +66,14 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end space-x-2">
-                    <img src={profile} alt="" className='w-8' />
+
+                    <div className="tooltip tooltip-bottom" data-tip={user? user.displayName : ''}>
+                        <img
+                        src={user?.photoURL ? user.photoURL : profile}
+                        alt=""
+                        className="w-10 h-10 rounded-full border border-gray-300"
+                    />
+                    </div>
 
                     {user ? (
                         <button onClick={handleLogout} className="btn">
