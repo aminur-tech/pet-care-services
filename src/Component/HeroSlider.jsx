@@ -4,7 +4,28 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const HeroSlider = ({ data }) => {
+const HeroSlider = () => {
+  const slides = [
+    {
+      id: 1,
+      image: "https://i.ibb.co.com/s9x1QLXd/images-2.jpg",
+      title: "Keep Your Pets Warm & Happy",
+      subtitle: "Cozy winter care for your furry friends",
+    },
+    {
+      id: 2,
+      image: "https://i.ibb.co.com/kg7Gwd0c/download-7.jpg",
+      title: "Stylish Winter Outfits for Pets",
+      subtitle: "Comfort meets cuteness this winter season",
+    },
+    {
+      id: 3,
+      image: "https://i.ibb.co.com/dJ65S65x/download-6.jpg",
+      title: "Healthy, Warm, and Loved",
+      subtitle: "Make sure your pets enjoy every chilly moment",
+    },
+  ];
+
   return (
     <Swiper
       spaceBetween={30}
@@ -14,7 +35,7 @@ const HeroSlider = ({ data }) => {
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
     >
-      {data.map(slide => (
+      {slides.map((slide) => (
         <SwiperSlide key={slide.id}>
           <div
             className="relative w-full h-[80vh] flex items-center justify-center bg-cover bg-center"
@@ -23,7 +44,7 @@ const HeroSlider = ({ data }) => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
             <div className="relative text-center text-white z-10 px-6">
               {/* Animated Title */}
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg  animate-fadeInUp">
+              <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg animate-fadeInUp">
                 {slide.title}
               </h1>
 
@@ -33,7 +54,7 @@ const HeroSlider = ({ data }) => {
               </p>
 
               {/* Animated Button */}
-              <button className="btn bg-white text-gray-900 hover:bg-blue-400 border-none font-semibold rounded-full px-6 py-2  animate-fadeInUp delay-400">
+              <button className="btn bg-white text-gray-900 hover:bg-blue-400 border-none font-semibold rounded-full px-6 py-2 animate-fadeInUp delay-400">
                 Explore Winter Care
               </button>
             </div>

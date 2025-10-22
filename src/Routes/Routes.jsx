@@ -6,6 +6,8 @@ import Login from '../Component/Login';
 import SignUp from '../Component/SignUp';
 import AuthLayOut from '../Layouts/AuthLayOut';
 import Loading from '../Component/Loading';
+import PrivateRoutes from './PrivateRouter';
+import ServiceDetails from '../Component/ServiceDetails';
 
 
 export const router = createBrowserRouter([
@@ -16,18 +18,7 @@ export const router = createBrowserRouter([
             index: true,
             path: '/',
             Component: Home,
-            loader: async () => {
-                const [data1, data2] = await Promise.all([
-                    fetch('/Pet_Care.json'),
-                    fetch('/hero_data.json'),
-                ]);
-
-                const petCareData = await data1.json();
-                const heroData = await data2.json();
-
-
-                return { petCareData, heroData }
-            },
+            loader: () => fetch('/Pet_Care.json'),
             HydrateFallback: Loading
         }]
     },
@@ -39,4 +30,15 @@ export const router = createBrowserRouter([
             { path: "/auth/signup", Component: SignUp },
         ],
     },
+
+    {
+        path: 'services/:serviceId',
+        element:
+            <PrivateRoutes>
+                <ServiceDetails></ServiceDetails>
+            </PrivateRoutes>,
+        loader: () => fetch('/Pet_Care.json'),
+        HydrateFallback:Loading
+
+    }
 ]);

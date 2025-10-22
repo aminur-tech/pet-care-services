@@ -6,13 +6,13 @@ import WinterTips from '../Component/WinterCare.jsx';
 import ExpertVetsData from '../Component/ExpertVetsData.jsx';
 
 const Home = () => {
-    const{ petCareData, heroData } = useLoaderData()
-    console.log(petCareData, heroData)
+    const petCareData = useLoaderData()
+    
     return (
         <div>
             {/* hero section */}
             <div className="mt-4 mb-4">
-                <HeroSlider data={heroData}></HeroSlider>
+                <HeroSlider></HeroSlider>
             </div>
 
 
