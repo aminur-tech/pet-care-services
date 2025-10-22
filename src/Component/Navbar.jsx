@@ -20,6 +20,17 @@ const Navbar = () => {
 
         <li>
             <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                    isActive ? "text-blue-600 font-bold underline" : "text-gray-700"
+                }
+            >
+                Services
+            </NavLink>
+        </li>
+
+        <li>
+            <NavLink
                 to="/profile"
                 className={({ isActive }) =>
                     isActive ? "text-blue-600 font-bold underline" : "text-gray-700"
@@ -29,16 +40,7 @@ const Navbar = () => {
             </NavLink>
         </li>
 
-        <li>
-            <NavLink
-                to="/services"
-                className={({ isActive }) =>
-                    isActive ? "text-blue-600 font-bold underline" : "text-gray-700"
-                }
-            >
-                Services
-            </NavLink>
-        </li>
+
     </>
 
     const handleLogout = () => {
@@ -67,12 +69,12 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end space-x-2">
 
-                    <div className="tooltip tooltip-bottom" data-tip={user? user.displayName : ''}>
+                    <div className="tooltip tooltip-bottom" data-tip={user ? user.displayName : ''}>
                         <img
-                        src={user?.photoURL ? user.photoURL : profile}
-                        alt=""
-                        className="w-10 h-10 rounded-full border border-gray-300"
-                    />
+                            src={user?.photoURL ? user.photoURL : profile}
+                            alt=""
+                            className="w-10 h-10 rounded-full border border-gray-300"
+                        />
                     </div>
 
                     {user ? (

@@ -3,12 +3,12 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="bg-black text-white mt-8">
+        <footer className="bg-gray-900 text-white mt-8">
             <div className="container mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
                 {/* Contact Info */}
                 <div className="text-center sm:text-left">
-                    <h3 className="font-bold text-xl mb-4 border-b border-gray-700 pb-1">Contact Us</h3>
+                    <h3 className="font-bold text-xl mb-4 border-b border-gray-700 pb-2">Contact Us</h3>
                     <p className="text-sm mb-1">Email: <span className="text-gray-300">info@petcare.com</span></p>
                     <p className="text-sm mb-1">Phone: <span className="text-gray-300">01327694078</span></p>
                     <p className="text-sm">Address: <span className="text-gray-300">Uksha-9440, Kaligonj, Satkhira, Bangladesh</span></p>
@@ -16,22 +16,22 @@ const Footer = () => {
 
                 {/* Social Links */}
                 <div className="text-center">
-                    <h3 className="font-bold text-xl mb-4 border-b border-gray-700 pb-1">Follow Us</h3>
+                    <h3 className="font-bold text-xl mb-4 border-b border-gray-700 pb-2">Follow Us</h3>
                     <div className="flex justify-center sm:justify-center md:justify-center space-x-4 mt-3">
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-                           className="p-2 rounded-full bg-white text-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                           className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors duration-300">
                             <FaFacebook size={24} />
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-                           className="p-2 rounded-full bg-white text-blue-400 hover:bg-blue-400 hover:text-white transition-colors duration-300">
+                           className="p-2 rounded-full bg-blue-400 hover:bg-blue-500 transition-colors duration-300">
                             <FaTwitter size={24} />
                         </a>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                           className="p-2 rounded-full bg-white text-pink-500 hover:bg-pink-500 hover:text-white transition-colors duration-300">
+                           className="p-2 rounded-full bg-pink-500 hover:bg-pink-600 transition-colors duration-300">
                             <FaInstagram size={24} />
                         </a>
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                           className="p-2 rounded-full bg-white text-blue-700 hover:bg-blue-700 hover:text-white transition-colors duration-300">
+                           className="p-2 rounded-full bg-blue-700 hover:bg-blue-800 transition-colors duration-300">
                             <FaLinkedin size={24} />
                         </a>
                     </div>
@@ -39,7 +39,7 @@ const Footer = () => {
 
                 {/* Policies */}
                 <div className="text-center sm:text-left md:text-left">
-                    <h3 className="font-bold text-xl mb-4 border-b border-gray-700 pb-1">Policy</h3>
+                    <h3 className="font-bold text-xl mb-4 border-b border-gray-700 pb-2">Policy</h3>
                     <ul className="space-y-2 mt-3">
                         <li>
                             <a href="/privacy" className="hover:text-gray-400 transition-colors duration-300">Privacy Policy</a>
@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
 
             {/* Copyright */}
-            <div className="text-center py-4 border-t border-gray-800 text-sm text-gray-400">
+            <div className="text-center py-4 border-t border-gray-700 text-sm text-gray-400 bg-gray-800">
                 &copy; {new Date().getFullYear()} Pet Care. All rights reserved.
             </div>
         </footer>

@@ -6,6 +6,7 @@ import Login from '../Component/Login';
 import SignUp from '../Component/SignUp';
 import AuthLayOut from '../Layouts/AuthLayOut';
 
+
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -13,8 +14,19 @@ export const router = createBrowserRouter([
         children: [{
             index: true,
             path: '/',
-            Component: Home
+            Component: Home,
+            loader: async () => {
+                const [data1, data2] = await Promise.all([
+                    fetch('/Pet_Care.json'),
+                    fetch('/hero_data.json'),
+                ]);
 
+                const petCareData = await data1.json();
+                const heroData = await data2.json();
+
+
+                return { petCareData, heroData }
+            }
         }]
     },
     {

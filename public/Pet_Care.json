@@ -1,16 +1,17 @@
 [
   {
     "serviceId": 1,
-    "serviceName": "Winter Coat Fitting for Dogs",
-    "providerName": "PawCare Studio",
-    "providerEmail": "info@pawcare.com",
-    "price": 25,
-    "rating": 4.9,
-    "slotsAvailable": 4,
-    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
-    "image": "https://i.ibb.co.com/6cQQt0Np/download.jpg",
-    "category": "Clothing"
+    "serviceName": "Pet Winter Wellness Checkup",
+    "providerName": "SnowVet Clinic",
+    "providerEmail": "care@snowvet.com",
+    "price": 40,
+    "rating": 5.0,
+    "slotsAvailable": 2,
+    "description": "Comprehensive winter health exam to check for seasonal allergies, joint stiffness, and cold-related issues.",
+    "image": "https://i.ibb.co.com/qwyjfn5/download-4.jpg",
+    "category": "Veterinary"
   },
+  
   {
     "serviceId": 2,
     "serviceName": "Winter Grooming & Paw Treatment",
@@ -32,7 +33,7 @@
     "rating": 4.7,
     "slotsAvailable": 6,
     "description": "Safe and warm boarding service for pets featuring temperature-controlled kennels and cozy bedding.",
-    "image": "https://i.ibb.co.com/cS5JmWN4/images.jpg",
+    "image": "https://i.ibb.co.com/3yhNXNKg/images-1.jpg",
     "category": "Boarding"
   },
   {
@@ -61,14 +62,15 @@
   },
   {
     "serviceId": 6,
-    "serviceName": "Pet Winter Wellness Checkup",
-    "providerName": "SnowVet Clinic",
-    "providerEmail": "care@snowvet.com",
-    "price": 40,
-    "rating": 5.0,
-    "slotsAvailable": 2,
-    "description": "Comprehensive winter health exam to check for seasonal allergies, joint stiffness, and cold-related issues.",
-    "image": "https://i.ibb.co.com/qwyjfn5/download-4.jpg",
-    "category": "Veterinary"
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/6cQQt0Np/download.jpg",
+    "category": "Clothing"
   }
+  
 ]
