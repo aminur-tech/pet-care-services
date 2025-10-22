@@ -5,6 +5,7 @@ import Home from '../Pages/Home';
 import Login from '../Component/Login';
 import SignUp from '../Component/SignUp';
 import AuthLayOut from '../Layouts/AuthLayOut';
+import Loading from '../Component/Loading';
 
 
 export const router = createBrowserRouter([
@@ -26,7 +27,8 @@ export const router = createBrowserRouter([
 
 
                 return { petCareData, heroData }
-            }
+            },
+            HydrateFallback: Loading
         }]
     },
     {

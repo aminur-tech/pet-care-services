@@ -99,7 +99,7 @@ const SignUp = () => {
                 <div className="card-body">
                     <form onSubmit={handleSignUp}>
                         <h2 className="text-2xl font-bold text-center mb-4">
-                            Register your account
+                            Sign Up your account
                         </h2>
 
                         <fieldset className="fieldset space-y-2">
