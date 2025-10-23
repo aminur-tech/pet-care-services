@@ -11,6 +11,7 @@ import ServiceDetails from '../Component/ServiceDetails';
 import My_Profile from '../Pages/My_Profile';
 import UpdateProfile from '../Pages/UpdateProfile';
 import Services from '../Pages/Services';
+import ForgetPassword from '../Component/ForgetPassword';
 
 
 export const router = createBrowserRouter([
@@ -33,6 +34,7 @@ export const router = createBrowserRouter([
         children: [
             { path: "/auth/login", Component: Login },
             { path: "/auth/signup", Component: SignUp },
+            { path: "/auth/login/forget", Component: ForgetPassword }
         ],
     },
 
@@ -40,10 +42,10 @@ export const router = createBrowserRouter([
     {
         path: '/services',
         element:
-        <PrivateRoutes>
-            <Services></Services>
-        </PrivateRoutes>,
-        loader: ()=>fetch('/Pet_Care.json'),
+            <PrivateRoutes>
+                <Services></Services>
+            </PrivateRoutes>,
+        loader: () => fetch('/Pet_Care.json'),
         HydrateFallback: Loading
     },
 

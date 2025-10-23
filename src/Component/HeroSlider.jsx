@@ -13,19 +13,19 @@ const HeroSlider = () => {
   const slides = [
     {
       id: 1,
-      image: "https://i.ibb.co.com/s9x1QLXd/images-2.jpg",
+      image: "https://i.ibb.co.com/5gjctjxY/shawn-rain-o-SIc-Hc-O5-FE-unsplash-1.jpg",
       title: "Keep Your Pets Warm & Happy",
       subtitle: "Cozy winter care for your furry friends",
     },
     {
       id: 2,
-      image: "https://i.ibb.co.com/kg7Gwd0c/download-7.jpg",
+      image: "https://i.ibb.co.com/0y2Jrx67/slide2.jpg",
       title: "Stylish Winter Outfits for Pets",
       subtitle: "Comfort meets cuteness this winter season",
     },
     {
       id: 3,
-      image: "https://i.ibb.co.com/dJ65S65x/download-6.jpg",
+      image: "https://i.ibb.co.com/7J7G8Zzq/Screenshot2025-10-2319180.jpg",
       title: "Healthy, Warm, and Loved",
       subtitle: "Make sure your pets enjoy every chilly moment",
     },

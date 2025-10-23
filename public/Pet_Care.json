@@ -8,7 +8,7 @@
     "rating": 5.0,
     "slotsAvailable": 2,
     "description": "Comprehensive winter health exam to check for seasonal allergies, joint stiffness, and cold-related issues.",
-    "image": "https://i.ibb.co.com/qwyjfn5/download-4.jpg",
+    "image": "https://i.ibb.co.com/PvCsVbKV/1.jpg",
     "category": "Veterinary"
   },
   
@@ -21,7 +21,7 @@
     "rating": 4.8,
     "slotsAvailable": 3,
     "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo to prevent dryness.",
-    "image": "https://i.ibb.co.com/PGDDGyxb/download-1.jpg",
+    "image": "https://i.ibb.co.com/VY5ZTGpq/2.jpg",
     "category": "Grooming"
   },
   {
@@ -33,19 +33,19 @@
     "rating": 4.7,
     "slotsAvailable": 6,
     "description": "Safe and warm boarding service for pets featuring temperature-controlled kennels and cozy bedding.",
-    "image": "https://i.ibb.co.com/3yhNXNKg/images-1.jpg",
+    "image": "https://i.ibb.co.com/k61F9BjJ/3.jpg",
     "category": "Boarding"
   },
   {
     "serviceId": 4,
     "serviceName": "Nutrient-Rich Winter Diet Plan",
-    "providerName": "HealthyPaws Nutrition",
+    "providerName": "",
     "providerEmail": "contact@healthypaws.com",
     "price": 20,
     "rating": 4.9,
     "slotsAvailable": 5,
     "description": "Customized diet plan with high-protein and omega-rich meals to boost pet immunity during winter.",
-    "image": "https://i.ibb.co.com/YBxmhKrH/download-9.jpg",
+    "image": "https://i.ibb.co.com/twjnkcHQ/4.jpg",
     "category": "Nutrition"
   },
   {
@@ -57,7 +57,7 @@
     "rating": 4.6,
     "slotsAvailable": 8,
     "description": "Fun indoor workout and playtime sessions to keep pets active during cold and snowy days.",
-    "image": "https://i.ibb.co.com/n2xqw0Z/download-3.jpg",
+    "image": "https://i.ibb.co.com/0j0856qt/5.jpg",
     "category": "Training"
   },
   {
@@ -69,7 +69,7 @@
     "rating": 4.9,
     "slotsAvailable": 4,
     "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
-    "image": "https://i.ibb.co.com/NdW1WkYB/download-8.jpg",
+    "image": "https://i.ibb.co.com/3m5MhWHJ/6.jpg",
     "category": "Clothing"
   }
   
