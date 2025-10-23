@@ -60,7 +60,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost text-xl">Pet_Care_Services</Link>
+                    <Link to='/'><img src="https://i.ibb.co.com/gM62jc2j/images.jpg" alt="" className='w-12 h-12 rounded-full'/></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-4">
@@ -78,11 +78,11 @@ const Navbar = () => {
                     </div>
 
                     {user ? (
-                        <button onClick={handleLogout} className="btn">
+                        <button onClick={handleLogout} className="btn bg-blue-600  rounded-lg shadow border-none text-white font-bold hover:bg-sky-500 transition-all duration-300">
                             Log Out
                         </button>
                     ) : (
-                        <Link to='/auth/login' className='btn'>Login</Link>
+                        <Link to='/auth/login' className='btn bg-blue-600  rounded-lg shadow border-none text-white font-bold hover:bg-sky-500 transition-all duration-300'>Login</Link>
                     )}
 
                 </div>

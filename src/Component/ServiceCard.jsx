@@ -25,7 +25,7 @@ const ServiceCard = ({ service }) => {
         </div>
          
 
-        <Link to={`/services/${serviceId}`} className="btn w-full bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition-all duration-300 shadow-md">
+        <Link to={`/services/${serviceId}`} className="btn w-full bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-sky-500 transition-all duration-300 shadow-md">
           View Details
         </Link>
       </div>

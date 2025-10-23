@@ -44,7 +44,7 @@ const HeroSlider = () => {
       {slides.map((slide, index) => (
         <SwiperSlide key={slide.id}>
           <div
-            className="relative w-full h-[80vh] flex items-center justify-center bg-cover bg-center"
+            className="relative w-full h-[50vh] md:h-[80vh] flex items-center justify-center bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
@@ -71,7 +71,7 @@ const HeroSlider = () => {
 
               <Link
                 to="/services"
-                className={`btn bg-white text-gray-900 hover:bg-blue-400 border-none font-semibold rounded-full px-6 py-2 ${
+                className={`btn bg-blue-600 text-white hover:bg-sky-500 border-none font-semibold rounded-full px-6 py-2 ${
                   activeIndex === index
                     ? "animate__animated animate__fadeInUp animate__delay-2s"
                     : ""

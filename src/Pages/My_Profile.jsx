@@ -25,7 +25,7 @@ const My_Profile = () => {
                     <p className="mt-2 text-gray-600">{user.email}</p> <br />
 
                     <Link to='/profile/update'
-                        className="mt-6 bg-indigo-500 text-white px-6 py-2 rounded-full hover:bg-indigo-600 transition"
+                        className="mt-6 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-sky-500 transition"
                     >
                         Update Profile
                     </Link>
