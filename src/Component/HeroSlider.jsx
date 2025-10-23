@@ -3,8 +3,13 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "animate.css";
+import { useState } from "react";
+import { Link } from "react-router";
 
 const HeroSlider = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const slides = [
     {
       id: 1,
@@ -30,12 +35,13 @@ const HeroSlider = () => {
     <Swiper
       spaceBetween={30}
       centeredSlides={true}
-      autoplay={{ delay: 3500, disableOnInteraction: false }}
+      autoplay={{ delay: 5000, disableOnInteraction: false }}
       pagination={{ clickable: true }}
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
+      onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)} 
     >
-      {slides.map((slide) => (
+      {slides.map((slide, index) => (
         <SwiperSlide key={slide.id}>
           <div
             className="relative w-full h-[80vh] flex items-center justify-center bg-cover bg-center"
@@ -43,20 +49,36 @@ const HeroSlider = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
             <div className="relative text-center text-white z-10 px-6">
-              {/* Animated Title */}
-              <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg animate-fadeInUp">
+              <h1
+                className={`text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg ${
+                  activeIndex === index
+                    ? "animate__animated animate__fadeInUp"
+                    : ""
+                }`}
+              >
                 {slide.title}
               </h1>
 
-              {/* Animated Subtitle */}
-              <p className="text-lg md:text-xl mb-6 drop-shadow-md animate-fadeInUp delay-200">
+              <p
+                className={`text-lg md:text-xl mb-6 drop-shadow-md ${
+                  activeIndex === index
+                    ? "animate__animated animate__fadeInDown animate__delay-1s"
+                    : ""
+                }`}
+              >
                 {slide.subtitle}
               </p>
 
-              {/* Animated Button */}
-              <button className="btn bg-white text-gray-900 hover:bg-blue-400 border-none font-semibold rounded-full px-6 py-2 animate-fadeInUp delay-400">
+              <Link
+                to="/services"
+                className={`btn bg-white text-gray-900 hover:bg-blue-400 border-none font-semibold rounded-full px-6 py-2 ${
+                  activeIndex === index
+                    ? "animate__animated animate__fadeInUp animate__delay-2s"
+                    : ""
+                }`}
+              >
                 Explore Winter Care
-              </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>

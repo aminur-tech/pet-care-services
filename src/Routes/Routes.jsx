@@ -8,6 +8,9 @@ import AuthLayOut from '../Layouts/AuthLayOut';
 import Loading from '../Component/Loading';
 import PrivateRoutes from './PrivateRouter';
 import ServiceDetails from '../Component/ServiceDetails';
+import My_Profile from '../Pages/My_Profile';
+import UpdateProfile from '../Pages/UpdateProfile';
+import Services from '../Pages/Services';
 
 
 export const router = createBrowserRouter([
@@ -20,7 +23,9 @@ export const router = createBrowserRouter([
             Component: Home,
             loader: () => fetch('/Pet_Care.json'),
             HydrateFallback: Loading
-        }]
+        },
+
+        ]
     },
     {
         path: "auth",
@@ -31,14 +36,39 @@ export const router = createBrowserRouter([
         ],
     },
 
+    // private router
     {
-        path: 'services/:serviceId',
+        path: '/services',
+        element:
+        <PrivateRoutes>
+            <Services></Services>
+        </PrivateRoutes>,
+        loader: ()=>fetch('/Pet_Care.json'),
+        HydrateFallback: Loading
+    },
+
+    {
+        path: '/services/:serviceId',
         element:
             <PrivateRoutes>
                 <ServiceDetails></ServiceDetails>
             </PrivateRoutes>,
         loader: () => fetch('/Pet_Care.json'),
-        HydrateFallback:Loading
+        HydrateFallback: Loading
 
+    },
+    {
+        path: '/profile',
+        element:
+            <PrivateRoutes>
+                <My_Profile></My_Profile>
+            </PrivateRoutes>
+    },
+    {
+        path: '/profile/update',
+        element:
+            <PrivateRoutes>
+                <UpdateProfile></UpdateProfile>
+            </PrivateRoutes>
     }
 ]);

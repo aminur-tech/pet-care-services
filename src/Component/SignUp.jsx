@@ -1,7 +1,7 @@
 import { Eye, EyeOff } from 'lucide-react';
 import React, { useState, useContext } from 'react';
 
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Providers/AuthContext';
 
 const SignUp = () => {
@@ -10,8 +10,10 @@ const SignUp = () => {
     const [emailError, setEmailError] = useState('')
     const [passwordError, setPasswordError] = useState('')
     const [termError, setTermError] = useState('')
-    const { user, setUser, createUser, updateUser, googleSignIn } = useContext(AuthContext);
+    const {  setUser, createUser, updateUser, googleSignIn } = useContext(AuthContext);
     const Navigate = useNavigate()
+    const location = useLocation()
+    // console.log(location)
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -72,7 +74,7 @@ const SignUp = () => {
                 } else if (error.code === 'auth/invalid-email') {
                     setEmailError('Please provide a valid email address.');
                 } else {
-                    setEmailError(error.message); 
+                    setEmailError(error.message);
                 }
             });
     };
@@ -82,11 +84,11 @@ const SignUp = () => {
         e.preventDefault()
         googleSignIn()
             .then((result) => {
-                console.log(result.user);
+                const loggedUser = result.user;
                 setUser({
-                    displayName: user.displayName,
-                    email: user.email,
-                    photoURL: user.photoURL
+                    displayName: loggedUser.displayName,
+                    email: loggedUser.email,
+                    photoURL: loggedUser.photoURL,
                 });
                 Navigate(`${location.state ? location.state : '/'}`)
             })

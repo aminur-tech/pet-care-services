@@ -8,7 +8,7 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('')
     const [message, setMessage] = useState('')
-    const { user, setUser, signInUser, googleSignIn , forgetPassword} = use(AuthContext)
+    const {  setUser, signInUser, googleSignIn, forgetPassword } = use(AuthContext)
     const location = useLocation()
     const Navigate = useNavigate()
     const emailRaf = useRef()
@@ -43,11 +43,11 @@ const Login = () => {
         e.preventDefault()
         googleSignIn()
             .then((result) => {
-                console.log(result.user);
+                const loggedUser = result.user;
                 setUser({
-                    displayName: user.displayName,
-                    email: user.email,
-                    photoURL: user.photoURL
+                    displayName: loggedUser.displayName,
+                    email: loggedUser.email,
+                    photoURL: loggedUser.photoURL,
                 });
                 Navigate(`${location.state ? location.state : '/'}`)
             })
@@ -55,13 +55,13 @@ const Login = () => {
     };
 
     // forget password
-     const handleForgotPassword = () => {
+    const handleForgotPassword = () => {
         const email = emailRaf.current.value
-       forgetPassword(email)
-            .then(() =>{
-             setMessage('Password reset email has been sent! Check your inbox.');
+        forgetPassword(email)
+            .then(() => {
+                setMessage('Password reset email has been sent! Check your inbox.');
             })
-            .catch(error =>{
+            .catch(error => {
                 console.log(error.message)
             })
 
@@ -108,7 +108,7 @@ const Login = () => {
                                 <a onClick={handleForgotPassword} className="link link-hover">Forgot password?</a>
 
                                 {
-                                    message&&<p className='text-green-500 mt-1 '>{message}</p>
+                                    message && <p className='text-green-500 mt-1 '>{message}</p>
                                 }
                             </div>
 

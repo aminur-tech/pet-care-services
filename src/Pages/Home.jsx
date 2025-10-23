@@ -4,6 +4,7 @@ import ServiceCard from '../Component/ServiceCard';
 import HeroSlider from '../Component/HeroSlider';
 import WinterTips from '../Component/WinterCare.jsx';
 import ExpertVetsData from '../Component/ExpertVetsData.jsx';
+import Testimonials from '../Component/Testimonials.jsx';
 
 const Home = () => {
     const petCareData = useLoaderData()
@@ -35,6 +36,9 @@ const Home = () => {
             <div className="px-4 sm:px-6 md:px-10 py-10">
                 <ExpertVetsData></ExpertVetsData>
             </div>
+
+            {/* Testimonials */}
+            <Testimonials></Testimonials>
 
 
         </div>

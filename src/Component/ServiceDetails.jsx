@@ -4,6 +4,8 @@ import Footer from './Footer';
 import { useLoaderData, useParams } from 'react-router';
 import { toast } from 'react-toastify';
 
+
+
 const ServiceDetails = () => {
     const { serviceId } = useParams();
     const services = useLoaderData();
@@ -36,7 +38,7 @@ const ServiceDetails = () => {
                 <Navbar></Navbar>
             </header>
             <main>
-                <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 mt-8">
+                <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 mt-8 mb-8">
                     {/* Image */}
                     <img
                         src={image}
