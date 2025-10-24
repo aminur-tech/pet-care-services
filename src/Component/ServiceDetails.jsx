@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import { useLoaderData, useParams } from 'react-router';
@@ -18,17 +17,14 @@ const ServiceDetails = () => {
         service;
 
     // form control
-    const [formData, setFormData] = useState({ name: "", email: "" });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault();
+        const form = e.target
+        const name = form.name.value 
+        const email = form.email.value
+        console.log(name, email)
         toast.success("🎉 Service booked successfully!");
-        setFormData({ name: "", email: "" });
+        form.reset();
     };
 
 
@@ -82,10 +78,8 @@ const ServiceDetails = () => {
                                         Name
                                     </label>
                                     <input
-                                        onChange={handleChange}
                                         type="text"
                                         name="name"
-                                         value={formData.name}
                                         required
                                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                                         placeholder="Enter your name"
@@ -97,10 +91,8 @@ const ServiceDetails = () => {
                                         Email
                                     </label>
                                     <input
-                                        onChange={handleChange}
                                         type="email"
                                         name="email"
-                                         value={formData.email}
                                         required
                                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                                         placeholder="Enter your email"

@@ -5,6 +5,9 @@ export const expertVets = [
     specialty: "Small Animal Specialist",
     image: "https://i.ibb.co.com/dsFkrXhZ/download-10.jpg",
     experience: "10 years experience",
+    phone: "+1 (555) 123-4567",
+    email: "sarah.johnson@petcare.com",
+    address: "123 Maple Street, Los Angeles, CA",
   },
   {
     id: 2,
@@ -12,6 +15,9 @@ export const expertVets = [
     specialty: "Surgery & Emergency Care",
     image: "https://i.ibb.co.com/TDGFXXWH/download-14.jpg",
     experience: "8 years experience",
+    phone: "+1 (555) 234-5678",
+    email: "michael.lee@petcare.com",
+    address: "456 Oak Avenue, New York, NY",
   },
   {
     id: 3,
@@ -19,6 +25,9 @@ export const expertVets = [
     specialty: "Nutrition & Wellness",
     image: "https://i.ibb.co.com/W4dLyDBZ/download-12.jpg",
     experience: "7 years experience",
+    phone: "+1 (555) 345-6789",
+    email: "emily.carter@petcare.com",
+    address: "789 Pine Road, Austin, TX",
   },
   {
     id: 4,
@@ -26,5 +35,8 @@ export const expertVets = [
     specialty: "Exotic Animals",
     image: "https://i.ibb.co.com/HTr5tc6S/David-Smith-NRT-scaled-e1635274621338.jpg",
     experience: "12 years experience",
+    phone: "+1 (555) 456-7890",
+    email: "david.smith@petcare.com",
+    address: "321 Cedar Lane, Miami, FL",
   },
 ];
