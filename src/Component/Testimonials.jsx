@@ -30,7 +30,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 py-12 px-6 rounded-2xl">
+    <div className="bg-gradient-to-r from-blue-50 to-purple-50 py-12 px-6 rounded-2xl mb-8">
       {/* Animated Heading */}
       <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10 animate__animated animate__fadeInDown">
         Happy Pet Owners
