@@ -1,4 +1,5 @@
 [
+  
   {
     "serviceId": 1,
     "serviceName": "Pet Winter Wellness Checkup",
@@ -9,9 +10,23 @@
     "slotsAvailable": 2,
     "description": "Comprehensive winter health exam to check for seasonal allergies, joint stiffness, and cold-related issues.",
     "image": "https://i.ibb.co.com/PvCsVbKV/1.jpg",
-    "category": "Veterinary"
+    "category": "Veterinary",
+    "location": {
+      "type": "In-Clinic",
+      "address": "123 Cold Paws Ln",
+      "city": "Snowdrift, CA"
+    },
+    "schedule": {
+      "days": ["Mon", "Wed", "Fri"],
+      "hours": "9:00 AM - 5:00 PM"
+    },
+    "features": ["Bloodwork included", "Dietary consultation", "Joint mobility assessment"],
+    "pricingDetails": {
+      "baseFee": 30,
+      "seasonalSurcharge": 10,
+      "totalPrice": 40
+    }
   },
-  
   {
     "serviceId": 2,
     "serviceName": "Winter Grooming & Paw Treatment",
@@ -22,7 +37,22 @@
     "slotsAvailable": 3,
     "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo to prevent dryness.",
     "image": "https://i.ibb.co.com/VY5ZTGpq/2.jpg",
-    "category": "Grooming"
+    "category": "Grooming",
+    "location": {
+      "type": "Mobile Service",
+      "address": "Client Location",
+      "city": "All Zones"
+    },
+    "schedule": {
+      "days": ["Tue", "Thu", "Sat"],
+      "hours": "10:00 AM - 6:00 PM"
+    },
+    "features": ["Paw pad wax", "De-shedding", "Warm towel dry"],
+    "pricingDetails": {
+      "baseFee": 30,
+      "mobileFee": 0,
+      "totalPrice": 30
+    }
   },
   {
     "serviceId": 3,
@@ -34,19 +64,48 @@
     "slotsAvailable": 6,
     "description": "Safe and warm boarding service for pets featuring temperature-controlled kennels and cozy bedding.",
     "image": "https://i.ibb.co.com/k61F9BjJ/3.jpg",
-    "category": "Boarding"
+    "category": "Boarding",
+    "location": {
+      "type": "Boarding Facility",
+      "address": "808 Icy Peak Dr",
+      "city": "Mt. Ridge, CO"
+    },
+    "schedule": {
+      "days": ["Daily"],
+      "hours": "24/7 Supervision"
+    },
+    "features": ["Heated floors", "Outdoor supervised playtime", "Webcam access"],
+    "pricingDetails": {
+      "baseFee": 40,
+      "nightlySurcharge": 5,
+      "totalPrice": 45
+    }
   },
   {
     "serviceId": 4,
     "serviceName": "Nutrient-Rich Winter Diet Plan",
-    "providerName": "",
+    "providerName": "HealthyPaws Nutrition", 
     "providerEmail": "contact@healthypaws.com",
     "price": 20,
     "rating": 4.9,
     "slotsAvailable": 5,
     "description": "Customized diet plan with high-protein and omega-rich meals to boost pet immunity during winter.",
     "image": "https://i.ibb.co.com/twjnkcHQ/4.jpg",
-    "category": "Nutrition"
+    "category": "Nutrition",
+    "location": {
+      "type": "Online Consultation",
+      "address": "Virtual Meeting",
+      "city": "Global"
+    },
+    "schedule": {
+      "days": ["Flexible"],
+      "hours": "Booked Appointment"
+    },
+    "features": ["1-on-1 consultation", "Customized recipe book", "30-day follow-up"],
+    "pricingDetails": {
+      "baseFee": 20,
+      "totalPrice": 20
+    }
   },
   {
     "serviceId": 5,
@@ -58,7 +117,21 @@
     "slotsAvailable": 8,
     "description": "Fun indoor workout and playtime sessions to keep pets active during cold and snowy days.",
     "image": "https://i.ibb.co.com/0j0856qt/5.jpg",
-    "category": "Training"
+    "category": "Training",
+    "location": {
+      "type": "In-Home",
+      "address": "Client Residence",
+      "city": "Local Area"
+    },
+    "schedule": {
+      "days": ["Mon", "Tue", "Thu"],
+      "hours": "3:00 PM - 7:00 PM"
+    },
+    "features": ["Agility toys", "Positive reinforcement", "Energy level report"],
+    "pricingDetails": {
+      "baseFee": 35,
+      "totalPrice": 35
+    }
   },
   {
     "serviceId": 6,
@@ -70,7 +143,21 @@
     "slotsAvailable": 4,
     "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
     "image": "https://i.ibb.co.com/3m5MhWHJ/6.jpg",
-    "category": "Clothing"
+    "category": "Clothing",
+    "location": {
+      "type": "In-Studio Fitting",
+      "address": "404 Warm Wool Rd",
+      "city": "Fashionville, NY"
+    },
+    "schedule": {
+      "days": ["Wed", "Sat"],
+      "hours": "11:00 AM - 4:00 PM"
+    },
+    "features": ["Custom measurement", "Waterproof options", "Style consultation"],
+    "pricingDetails": {
+      "baseFee": 25,
+      "totalPrice": 25
+    }
   }
-  
+
 ]

@@ -12,6 +12,8 @@ import My_Profile from '../Pages/My_Profile';
 import UpdateProfile from '../Pages/UpdateProfile';
 import Services from '../Pages/Services';
 import ForgetPassword from '../Component/ForgetPassword';
+import Contact from '../Pages/Contact';
+import About from '../Pages/About';
 
 
 export const router = createBrowserRouter([
@@ -26,6 +28,28 @@ export const router = createBrowserRouter([
             HydrateFallback: Loading
         },
 
+        {
+            path: '/services',
+            element: <Services></Services>,
+            loader: () => fetch('/Pet_Care.json'),
+            HydrateFallback: Loading
+        },
+        {
+            path: '/contact',
+            element:<Contact></Contact>, 
+        },
+        {
+            path: '/about',
+            element:<About></About>, 
+        },
+        {
+            path: '/services/:serviceId',
+            element: <ServiceDetails></ServiceDetails>,
+            loader: () => fetch('/Pet_Care.json'),
+            HydrateFallback: Loading
+        },
+
+
         ]
     },
     {
@@ -39,26 +63,6 @@ export const router = createBrowserRouter([
     },
 
     // private router
-    {
-        path: '/services',
-        element:
-            <PrivateRoutes>
-                <Services></Services>
-            </PrivateRoutes>,
-        loader: () => fetch('/Pet_Care.json'),
-        HydrateFallback: Loading
-    },
-
-    {
-        path: '/services/:serviceId',
-        element:
-            <PrivateRoutes>
-                <ServiceDetails></ServiceDetails>
-            </PrivateRoutes>,
-        loader: () => fetch('/Pet_Care.json'),
-        HydrateFallback: Loading
-
-    },
     {
         path: '/profile',
         element:

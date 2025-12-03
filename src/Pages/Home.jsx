@@ -12,15 +12,15 @@ const Home = () => {
     return (
         <div>
             {/* hero section */}
-            <div className="mt-4 mb-4">
+            <div className='mt-2'>
                 <HeroSlider></HeroSlider>
             </div>
 
 
            {/* Popular Winter Care Services */}
-            <div className='px-4 sm:px-6 md:px-10 py-10'>
+            <div className='mt-20'>
                 <h1 className='text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900'>Popular Winter Care Services</h1>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 mb-4 gap-8 justify-items-center'>
+                <div className='grid grid-cols-2 lg:grid-cols-4 mt-8 mb-4 gap-4 justify-items-center'>
                     {
                         petCareData.map(service => <ServiceCard key={service.serviceId} service={service}></ServiceCard>)
                     }
@@ -28,17 +28,19 @@ const Home = () => {
             </div>
 
             {/* winter health care tips */}
-            <div className='px-4 sm:px-6 md:px-10 py-10'>
+            <div className='mt-20'>
                 <WinterTips></WinterTips>
             </div>
 
             {/* expert vats */}
-            <div className="px-4 sm:px-6 md:px-10 py-10">
+            <div className='mt-20'>
                 <ExpertVetsData></ExpertVetsData>
             </div>
 
             {/* Testimonials */}
-            <Testimonials></Testimonials>
+            <div className='mt-20'>
+                <Testimonials></Testimonials>
+            </div>
 
 
         </div>
